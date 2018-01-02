@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Admin Log In Page</title>
+        <meta charset="utf-8" />  
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="X-UA-Conpatible" content="IE=edge"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+        <link href="config.css" rel="stylesheet" type="text/css"/>
+        
+    </h:head>
+    <h:body>
+        
+    <nav class="navbar navbar-inverse">
+      
+        <div class="navbar-header">
+          <a class="navbar-brand" >E-Commerce Management Page</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index1.go">Home</a></li>
+          <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Catagory
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <li><a href="category.go">Catagories</a></li>
+          <li><a href="subcategory.go">Sub Catagories</a></li>
+          <li><a href="catalogs.go">Catalogs</a></li>
+          </ul>
+          </li>
+          
+          <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Product
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <li><a href="product.go">Add-View Product</a></li>
+          <li><a href="productfeature.go">Add-View Features</a></li>
+          <li><a href="stock.go">Add-View Stock</a></li>
+          </ul>
+          </li>          
+          <li><a href="paymethod.go">Pay Method</a></li>
+          <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Officer
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <li><a href="systemadmin.go">Add-View Management Officer</a></li>
+          <li><a href="cargoofficer.go">Add-View Cargo Officer</a></li>
+          </ul>
+          </li> 
+          <li><a href="order.go">View Order Reports</a></li>
+          <li><a href="customer.go">Customers</a></li>
+          <li><a href="cargostatus.go">Cargo Status</a></li>
+          <li><a href="index.go">Log Out</a></li>
+        </ul>
+      
+    </nav>
+
+        <div class="container-fluid">
+
+
+        <div class="row">
+            <div class="col-md-5 height">        
+                <h:form>
+                    <div class="input-group form1">
+                  <span class="input-group-addon" id="sizing-addon2">
+                      <h:outputLabel value="Select a Catalog"/>
+                  </span>                        
+                        <h:selectOneMenu styleClass="form-control">
+                            <f:selectItem itemValue="1" itemLabel="Sonbahar/Kış Kreasyonu"/>
+                            <f:selectItem itemValue="1" itemLabel="Yaz Sonu Etekleri"/>
+                            <f:selectItem itemValue="1" itemLabel="Seksi Kadın"/>
+                            <f:selectItem itemValue="1" itemLabel="1 Alana 1 bedava"/>
+                            <f:selectItem itemValue="1" itemLabel="İyi Görün Sezonu"/>
+                                                        
+                        </h:selectOneMenu>
+                    </div>    
+                <div class="input-group form1">
+                  <span class="input-group-addon" id="sizing-addon2">
+                      <h:outputLabel value="Product Code :"/>
+                  </span>
+                    <h:inputText styleClass="form-control" required="true" requiredMessage="Enter a Product Code"/>
+                </div>
+                
+                <div class="input-group form1">
+                  <span class="input-group-addon" id="sizing-addon2">
+                      <h:outputLabel value="Product Name :"/>
+                  </span>
+                    <h:inputText styleClass="form-control" required="true" requiredMessage="Enter a Product Name"/>
+                </div>
+                    
+                <div class="input-group form1">
+                  <span class="input-group-addon" id="sizing-addon2">
+                      <h:outputLabel value="Image Url 1 :"/>
+                  </span>
+                    <h:inputText styleClass="form-control" required="true" requiredMessage="Enter a Image Url 1"/>
+                </div>
+                
+                <div class="input-group form1">
+                  <span class="input-group-addon" id="sizing-addon2">
+                      <h:outputLabel value="Image Url 2 :"/>
+                  </span>
+                    <h:inputText styleClass="form-control" required="true" requiredMessage="Enter a Image Url 2"/>
+                </div>                
+               
+                <div class="input-group form1">
+                  <span class="input-group-addon" id="sizing-addon2">
+                      <h:outputLabel value="Explain :"/>
+                  </span>
+                    <h:inputTextarea styleClass="form-control" required="true" requiredMessage="Enter a Explain"></h:inputTextarea>
+                </div>
+                
+                <div class="input-group form1">
+                  <span class="input-group-addon" id="sizing-addon2">
+                      <h:outputLabel value="Price :"/>
+                  </span>
+                    <h:inputText styleClass="form-control" required="true" requiredMessage="Enter a Price" validatorMessage="Enter only Integer or Double Price Value">
+                            <f:validateDoubleRange  />
+                    </h:inputText>
+                </div>
+
+                <div class="input-group form1">
+                  <span class="input-group-addon" id="sizing-addon2">
+                      <h:outputLabel value="Sale :"/>
+                  </span>
+                        <h:selectOneMenu styleClass="form-control">
+                            <f:selectItem itemValue="1" itemLabel="Evet"/>
+                            <f:selectItem itemValue="1" itemLabel="Hayır"/>
+
+                                                        
+                        </h:selectOneMenu>
+                </div>
+
+                <div class="input-group form1">
+                  <span class="input-group-addon" id="sizing-addon2">
+                      <h:outputLabel value="Sale price :"/>
+                  </span>
+                    <h:inputText  styleClass="form-control"  required="true" requiredMessage="Enter a Sale price" validatorMessage="Enter only Integer or Double Sale Price Value" >
+                        <f:validateDoubleRange  />
+                    </h:inputText>
+                    
+                </div>
+                    
+                <h:commandButton styleClass="btn btn-info button1" value="Add" />
+                <h:messages style="color:blue; text-decoration:underline;"/>
+                </h:form>
+            </div>
+            <div class="col-md-6 col-md-offset-1 height ">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Product Name</th>
+                    <th>Explain</th>
+                    <th>Price</th>
+                    <th>Sale</th>
+                    <th>Sale Price</th>
+                    <th>Edit Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TK010E7Y33</td>
+                    <td>Mavi Pantolon</td>
+                    <td>Kot pantolon</td>
+                    <td>129.90</td>
+                    <td>TRUE</td>
+                    <td>89.90</td>
+                    <td>Edit / Delete</td>
+                  </tr>
+                  <tr>
+                    <td>TK010E7Y32</td>
+                    <td>Deri Ceket</td>
+                    <td>Yılan Derisinden </td>
+                    <td>499.90</td>
+                    <td>FALSE</td>
+                    <td>499.90</td>
+                    <td>Edit / Delete</td>
+                  </tr>
+
+                  <tr>
+                    <td>TK010E7Y38</td>
+                    <td>Mavi Etek</td>
+                    <td>Işıltılı</td>
+                    <td>79.90</td>
+                    <td>FALSE</td>
+                    <td>79.90</td>
+                    <td>Edit / Delete</td>
+                  </tr>   
+                  <tr>
+                    <td>TK010E7Y30</td>
+                    <td>V Yaka tişört</td>
+                    <td>Pamuklu</td>
+                    <td>79.90</td>
+                    <td>FALSE</td>
+                    <td>79.90</td>
+                    <td>Edit / Delete</td>
+                  </tr>  
+                   <tr>
+                    <td>TK010E7Y36</td>
+                    <td>Düz tişört</td>
+                    <td>Pamuklu</td>
+                    <td>79.90</td>
+                    <td>FALSE</td>
+                    <td>79.90</td>
+                    <td>Edit / Delete</td>
+                  </tr>  
+                    
+                </tbody>
+            </table>
+            </div>
+        </div>
+        </div>
+
+        
+        <footer class="container-fluid bg-4 text-center">
+        <h5>E-Commerce for A Clothing Store Management Page</h5> 
+        </footer>
+    </h:body>
+</html>
+

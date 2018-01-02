@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>E-Commerce for A Clothing Store</title>
+        <meta charset="utf-8" />  
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="X-UA-Conpatible" content="IE=edge"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <link href="shop-homepage.css" rel="stylesheet" type="text/css"/>
+        
+    </h:head>
+    <h:body>
+
+
+    <nav class="navbar navbar-light navbar-fixed-top " style="background-color: #e3f2fd;" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.go">E-Commerce for A Clothing Store </a>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Kadın
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li><a href="#">Elbiseler</a></li>
+                <li><a href="#">Etekler</a></li>
+                <li><a href="#">İç Giyim</a></li>
+                </ul>
+                </li>
+                    
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Erkek
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li><a href="#">Gömlekler</a></li>
+                <li><a href="#">Pantolonlar</a></li>
+                </ul>
+                </li>    
+                <li>
+                        <a href="#">Çocuk</a>
+               </li>
+                    <li>
+                        <a href="#">Saat</a>
+                </li>
+                  
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="sign.go">Sign In</a></li> 
+                    <li><a href="sign.go">Sign Up</a></li> 
+                    <li><a href="help.go">Help</a></li>
+                </ul>
+                
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12 col">
+                <div class="col-lg-4 col">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                          
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="image/small2.jpg" alt=""/>
+                                    
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="image/small3.jpg" alt=""/>
+                                </div>
+ 
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                </div>
+                <div class="col-lg-8 ">
+                    <h2>Pembe Kadın Etek // TK010E7Y38</h2>
+                    <h4>Kadın-Etek-Yaz Sezonu</h4>
+                    <h3><b>70 TL</b></h3>
+                    <p>Çekici dokunuşlarla şehirli modasının temposunu güçlendiren bu etek, günlük giyim kodlarını çabasız bir lüks hissiyle zenginleştirerek tarzınıza farklı bir yorum getiriyor.</p>
+                    <b>Select Body  :  </b> <br/>
+                    <h:form>
+                    <h:selectOneMenu styleClass="form-control formm">
+                            <f:selectItem itemValue="1" itemLabel="XS"/>
+                            <f:selectItem itemValue="2" itemLabel="S"/>
+                            <f:selectItem itemValue="3" itemLabel="M"/>
+                            <f:selectItem itemValue="4" itemLabel="L"/>                                                     
+                    </h:selectOneMenu>  
+                    <br/>
+                    <b>Quantity Select</b> <br/>
+                    <h:selectOneMenu styleClass="form-control formm">
+                            <f:selectItem itemValue="1" itemLabel="1"/>
+                            <f:selectItem itemValue="2" itemLabel="2"/>
+                            <f:selectItem itemValue="3" itemLabel="3"/>
+                            <f:selectItem itemValue="4" itemLabel="4"/>
+                            <f:selectItem itemValue="5" itemLabel="5"/>                                                        
+                    </h:selectOneMenu>  
+                    
+                    <br/>
+                    <b>Cargo Select</b> <br/>
+                    <h:selectOneMenu styleClass="form-control formm">
+                            <f:selectItem itemValue="1" itemLabel="MNG CARGO"/>
+                            <f:selectItem itemValue="2" itemLabel="ARAS CARGO"/>
+                                                  
+                    </h:selectOneMenu>  
+                    
+                    <br/>
+                    <b>Payment options</b> <br/><br/>
+
+                    <h:commandButton class="btn btn-primary" value="Buy with credit card" action="purchase.go?faces-redirect=true"/> &nbsp;&nbsp;&nbsp;
+                    <h:commandButton class="btn btn-info" value="Buy with pay at the door" action="orderreport.go?faces-redirect=true"/>
+                    </h:form>
+                </div>
+                
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <hr/>
+
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; E-Commerce for A Clothing Store || <a href="management/">Management Page</a> </p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+        
+        
+    </h:body>
+</html>
+

@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Admin Log In Page</title>
+        <meta charset="utf-8" />  
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="X-UA-Conpatible" content="IE=edge"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+        <link href="config.css" rel="stylesheet" type="text/css"/>
+        
+    </h:head>
+    <h:body>
+        
+    <nav class="navbar navbar-inverse">
+      
+        <div class="navbar-header">
+          <a class="navbar-brand" >E-Commerce Management Page</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index1.go">Home</a></li>
+          <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Catagory
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <li><a href="category.go">Catagories</a></li>
+          <li><a href="subcategory.go">Sub Catagories</a></li>
+          <li><a href="catalogs.go">Catalogs</a></li>
+          </ul>
+          </li>
+          
+          <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Product
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <li><a href="product.go">Add-View Product</a></li>
+          <li><a href="productfeature.go">Add-View Features</a></li>
+          <li><a href="stock.go">Add-View Stock</a></li>
+          </ul>
+          </li>          
+          <li><a href="paymethod.go">Pay Method</a></li>
+          <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Officer
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <li><a href="systemadmin.go">Add-View Management Officer</a></li>
+          <li><a href="cargoofficer.go">Add-View Cargo Officer</a></li>
+          </ul>
+          </li> 
+          <li><a href="order.go">View Order Reports</a></li>
+          <li><a href="customer.go">Customers</a></li>
+          <li><a href="cargostatus.go">Cargo Status</a></li>
+          <li><a href="index.go">Log Out</a></li>
+        </ul>
+      
+    </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5">
+                <div class="well well-sm">Help: You Can add delete view category/product with nav bar                   
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="well well-sm">All pages include help boxes , They direct to user</div>                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                <div class="well well-sm">System administrators can use all the features of the system.                   
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="well well-sm">Cargo workers can only view the cargo status update section and sales report section</div>                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                <div class="well well-sm">There are 1552 registered customers on a e-commerce system.                   
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="well well-sm">150 registered users are active for now</div>                    
+                </div>
+            </div>
+                            <div class="col-md-12 ">
+                                <h3> The last 20 orders are listed below    </h3>                
+                </div>
+            <div class="col-md-12 col-md-offset-1 height ">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Order Code</th>
+                    <th>User</th>
+                    <th>Product Code</th>
+                    <th>Order Tarihi</th>
+                    <th>Price</th>
+                    <th>Pay Method</th>
+                    <th>Cargo Status </th>
+                    <th>Update Cargo Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2288</td>
+                    <td>anilkorkmaz@hotmail.com</td>
+                    <td>TK010E7Y33</td>
+                    <td>02.05.2017</td>
+                    <td>129.90</td>
+                    <td>Kredi Kartı</td>
+                    <td>Müşteri Teslim aldı</td>
+                    <td>Passive</td>
+
+                  </tr>
+                  <tr>
+                    <td>227</td>
+                    <td>rıza@hotmail.com</td>
+                    <td>TK010E7Y36</td>
+                    <td>01.01.2017</td>
+                    <td>16.00</td>
+                    <td>Kapıda Ödeme</td>
+                    <td>Kargoya verildi onayı bekleniyor</td>
+                    <td>Update</td>
+                  </tr>                  
+                  <tr>
+                    <td>2266</td>
+                    <td>alpergok@hotmail.com</td>
+                    <td>TK010E7Y38</td>
+                    <td>01.02.2017</td>
+                    <td>90.00</td>
+                    <td>Kapıda Ödeme</td>
+                    <td>Salı Kargoya verilecek</td>
+                    <td>Update</td>
+                  </tr>                      
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        
+        <footer class="container-fluid bg-4 text-center">
+        <h5>E-Commerce for A Clothing Store Management Page</h5> 
+        </footer>
+    </h:body>
+</html>
+

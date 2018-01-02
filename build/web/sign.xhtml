@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Admin Log In Page</title>
+        <meta charset="utf-8" />  
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="X-UA-Conpatible" content="IE=edge"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+        <link href="management/config.css" rel="stylesheet" type="text/css"/>
+        <link href="shop-homepage.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+
+
+    <nav class="navbar navbar-light navbar-fixed-top " style="background-color: #e3f2fd;" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.go">E-Commerce for A Clothing Store </a>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Kadın
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li><a href="#">Elbiseler</a></li>
+                <li><a href="#">Etekler</a></li>
+                <li><a href="#">İç Giyim</a></li>
+                </ul>
+                </li>
+                    
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Erkek
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li><a href="#">Gömlekler</a></li>
+                <li><a href="#">Pantolonlar</a></li>
+                </ul>
+                </li>    
+                <li>
+                        <a href="#">Çocuk</a>
+               </li>
+                    <li>
+                        <a href="#">Saat</a>
+                </li>
+                  
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="sign.go">Sign In</a></li> 
+                    <li><a href="sign.go">Sign Up</a></li> 
+                    <li><a href="help.go">Help</a></li>
+                </ul>
+                
+            </div>
+
+        </div>
+    </nav>
+
+    
+     <div class="container">
+
+          <div class="row">
+
+
+
+            <div class="row">
+            <div class="col-md-5 height">        
+                <h:form>
+                    <h4>Customer Sign In</h4>
+                <div class="input-group form1">
+                  <span class="input-group-addon" >
+                      <h:outputLabel value="E-mail Adress :"/>
+                  </span>
+                    <h:inputText id="f1" styleClass="form-control" required="true" requiredMessage="Enter a  E-mail Adress" validatorMessage="Email is wrong" >
+                        <f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+                    </h:inputText>                   
+                </div>                  
+
+                <div class="input-group form1">
+                  <span class="input-group-addon" >
+                      <h:outputLabel value="Password :"/>
+                  </span>
+                    <h:inputSecret id="f2" styleClass="form-control" required="true"  requiredMessage="Enter a Password"/>
+                </div>         
+                    
+                    <h4 >Remember    : <h:selectBooleanCheckbox/></h4>
+                    <h:commandButton styleClass="btn btn-info button1" value="Sign In" action="index.go"/>
+                <h:messages for="f1" style="color:blue; text-decoration:underline;"/>
+                <h:messages for="f2" style="color:blue; text-decoration:underline;"/>
+                </h:form>
+            </div>
+            
+            <div class="col-md-6 col-md-offset-1 height ">
+                
+                <h:form >
+                    <h4>Customer Sign Up</h4>
+                <div class="input-group form1">
+                  <span class="input-group-addon" >
+                      <h:outputLabel value="Name :"/>
+                  </span>
+                    <h:inputText id="a1" styleClass="form-control"  required="true" requiredMessage="Enter a  Name"/>
+                </div>                  
+
+                <div class="input-group form1" >
+                  <span class="input-group-addon" >
+                      <h:outputLabel value="Last Name :"/>
+                  </span>
+                    <h:inputText id="a2" styleClass="form-control"  required="true" requiredMessage="Enter a Last Name"/>
+                </div>  
+                    
+                <div class="input-group form1">
+                  <span class="input-group-addon" >
+                      <h:outputLabel value="Phone :"/>
+                  </span>
+                    <h:inputText id="a3" styleClass="form-control" required="true" requiredMessage="Enter a Phone number" validatorMessage="Enter only numbers for Phone 1">
+                            <f:validateDoubleRange  />
+                    </h:inputText>
+                </div>
+                    
+
+                    
+                <div class="input-group form1">
+                  <span class="input-group-addon" >
+                      <h:outputLabel value="Country :"/>
+                  </span>
+                        <h:selectOneMenu styleClass="form-control">
+                            <f:selectItem itemValue="1" itemLabel="Turkiye"/>
+                            <f:selectItem itemValue="1" itemLabel="ABD"/>
+                            <f:selectItem itemValue="1" itemLabel="Ingiltere"/>
+                            <f:selectItem itemValue="1" itemLabel="Somali"/>
+                                                        
+                        </h:selectOneMenu>
+                </div>
+                
+                <div class="input-group form1">
+                  <span class="input-group-addon" >
+                      <h:outputLabel value="City :"/>
+                  </span>
+                        <h:selectOneMenu styleClass="form-control">
+                            <f:selectItem itemValue="1" itemLabel="Adana"/>
+                            <f:selectItem itemValue="1" itemLabel="Ankara"/>
+                            <f:selectItem itemValue="1" itemLabel="İstanbul"/>
+                            <f:selectItem itemValue="1" itemLabel="İzmir"/>
+                                                        
+                        </h:selectOneMenu>
+                </div>
+                
+                <div class="input-group form1">
+                  <span class="input-group-addon" >
+                      <h:outputLabel value="Address :"/>
+                  </span>
+                    <h:inputTextarea id="a7" styleClass="form-control" required="true" requiredMessage="Enter a Address"/>
+                </div>
+                
+                <div class="input-group form1">
+                  <span class="input-group-addon" >
+                      <h:outputLabel value="E-Mail Addres :"/>
+                  </span>
+                    <h:inputText id="a8" styleClass="form-control" required="true" requiredMessage="Enter a E-mail" validatorMessage="Email is wrong">
+                        <f:validateRegex pattern="[\w\.-]*[a-zA-Z0-9_]@[\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]" />
+                    </h:inputText>
+                </div>
+                  
+                <div class="input-group form1">
+                  <span class="input-group-addon" >
+                      <h:outputLabel value="Password :"/>
+                  </span>
+                    <h:inputSecret id="a9" styleClass="form-control" required="true" requiredMessage="Enter a password"/>
+                </div>    
+                
+                <div class="input-group form1">
+                  <span class="input-group-addon" >
+                      <h:outputLabel value="Password control :"/>
+                  </span>
+                    <h:inputSecret id="a10" styleClass="form-control" required="true" requiredMessage="Enter Password control"/>
+                </div>
+                    
+                    <h:commandButton styleClass="btn btn-info button1" value="Add" action="index.go" />
+                <h:messages style="color:blue; text-decoration:underline;" for="a1" />
+                <h:messages style="color:blue; text-decoration:underline;" for="a2"/>
+                <h:messages style="color:blue; text-decoration:underline;" for="a3"/>                
+                <h:messages style="color:blue; text-decoration:underline;" for="a5"/>
+                <h:messages style="color:blue; text-decoration:underline;" for="a6"/>
+                <h:messages style="color:blue; text-decoration:underline;" for="a7" />
+                <h:messages style="color:blue; text-decoration:underline;" for="a8"/>
+                <h:messages style="color:blue; text-decoration:underline;" for="a9"/>
+                <h:messages style="color:blue; text-decoration:underline;" for="a10" />
+                
+                </h:form>
+            </div>
+        </div>
+        
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <hr/>
+
+
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; E-Commerce for A Clothing Store || <a href="management/">Management Page</a> </p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+        
+        
+    </h:body>
+</html>
+
